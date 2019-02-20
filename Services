@@ -1,0 +1,19 @@
+https://community.cisco.com/t5/other-security-subjects/service-tcp-keepalives-in-out/td-p/3193094
+
+no service pad
+no service finger
+no ip source-route
+no ip gratuitous-arps
+no service dhcp (only on devices that don't offer DHCP relay or addresses)
+no ip finger
+no tcp-small-servers (IOS 11.2 and older)
+no udp-small-servers (IOS 11.2 and older)
+
+!logging timestamps helps you correlate events across network devices
+service timestamps debug datetime msec localtime
+service timestamps log datetime msec localtime
+service sequence-numbers
+service counters max age 5
+service password-encryption
+service linenumber
+service counters max age 5
